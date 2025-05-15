@@ -28,15 +28,23 @@ public class MainClass {
 		}
 	}
 	
-	//Recursive method that returns a specific Fibonacci sequence value
+	/** Recursive method that returns a specific value based on the Fibonacci sequence given by the argument.
+	 * 
+	 * @param n the number of fibonacci sequences that will happen and the value that dictates which fibonacci sequence value will be returned
+	 * @param currentValue represents the most recent Fibonacci sequence value. 
+	 * This value is summed with {@code previousValue} to get the next Fibonacci sequence value.
+	 * @param previousValue represents fibonacci sequence value before the most recent Fibonacci sequence value. 
+	 * This value is summed with {@code currentValue} to get the next Fibonacci sequence value.
+	 * @return an integer value, this value represents the Fibonacci value yielded from the specific Fibonacci sequence.
+	 */
 	public static int getFibonacciTerm(int n, int currentValue, int previousValue) {
 		int nextValue = previousValue;
-		//Starts as 1 to represent F1
+		//Starts as 1 to represent F1 in Fibonacci sequence
 		int finalValue = 1;
 		
 		//Recursively calls itself and inserts new arguments
 		if(n - 1 > 0) {
-			//Adds the previous value in the fibonacci sequence to the current value to get the next value in the sequence
+			//Adds the previous value in the Fibonacci sequence to the current value to get the next value in the sequence
 			nextValue = currentValue + previousValue;
 			finalValue = getFibonacciTerm(n-1, nextValue, currentValue);
 		}
@@ -46,11 +54,12 @@ public class MainClass {
 			finalValue = 0;
 		}
 		
+		//Used to set finalValue to the last fibonacci sequence value
 		else {
 			finalValue = currentValue;
 		}
 		
+		//Returns the Fibonacci sequence alue
 		return finalValue;
-		
 	}
 }
