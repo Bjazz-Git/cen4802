@@ -48,7 +48,7 @@ public class MainClass {
 			finalValue = currentValue;
 		}
 		
-		//Returns the Fibonacci sequence alue
+		//Returns the Fibonacci sequence value
 		return finalValue;
 	}
 
