@@ -21,7 +21,7 @@ public class TestFibonacci {
     }
 
     
-    @After
+    @Test
     public void testFibonacciSequencePrint(){
         String fibonacciPrint = MainClass.printFibonacciSequence(fibonacciTerm, finalValue);
         assertTrue( fibonacciPrint != "");
