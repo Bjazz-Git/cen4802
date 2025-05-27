@@ -13,19 +13,8 @@ public class MainClass {
 		int finalValue;
 		
 		finalValue = getFibonacciTerm(fibonacciTerm, currentValue, previousValue);
+		System.out.println(printFibonacciSequence(fibonacciTerm, finalValue));
 		
-		if(fibonacciTerm == 1) {
-			System.out.printf("The %dst term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
-		}
-		else if(fibonacciTerm == 2) {
-			System.out.printf("The %dnd term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
-		}
-		else if(fibonacciTerm == 3) {
-			System.out.printf("The %drd term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
-		}
-		else {
-			System.out.printf("The %dth term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
-		}
 	}
 	
 	/** Recursive method that returns a specific value based on the Fibonacci sequence given by the argument.
@@ -61,5 +50,24 @@ public class MainClass {
 		
 		//Returns the Fibonacci sequence alue
 		return finalValue;
+	}
+
+	public static String printFibonacciSequence(int fibonacciTerm, int finalValue){
+		String fibonacciString = "";
+
+		if(fibonacciTerm == 1) {
+			fibonacciString = String.format("The %dst term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
+		}
+		else if(fibonacciTerm == 2) {
+			fibonacciString = String.format("The %dnd term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
+		}
+		else if(fibonacciTerm == 3) {
+			fibonacciString = String.format("The %drd term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
+		}
+		else {
+			fibonacciString = String.format("The %dth term of the Fibonacci sequence is %d", fibonacciTerm, finalValue);
+		}
+
+		return fibonacciString;
 	}
 }
